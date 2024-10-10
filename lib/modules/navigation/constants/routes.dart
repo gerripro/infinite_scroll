@@ -1,7 +1,7 @@
 abstract class RoutePath {
-  static const String picList = '/picList';
+  static const String picGallery = '/picGallery';
 }
 
 abstract class RouteName {
-  static const String picList = 'picList';
+  static const String picGallery = 'picGallery';
 }

@@ -1,6 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:infinite_scroll/app/di/ioc.dart';
 import 'package:infinite_scroll/modules/navigation/constants/routes.dart';
+import 'package:infinite_scroll/modules/picture_gallery/clients/pictures_client.dart';
+import 'package:infinite_scroll/modules/picture_gallery/view_models/picture_gallery_vm.dart';
+import 'package:infinite_scroll/pages/pictureGallery/picture_gallery.dart';
 import 'package:injectable/injectable.dart';
 
 part "app_router.dart";

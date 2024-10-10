@@ -1,13 +1,15 @@
 part of "navigation_register_module.dart";
 
 final GoRouter _router = GoRouter(
-  initialLocation: RoutePath.picList,
+  initialLocation: RoutePath.picGallery,
   routes: <RouteBase>[
     GoRoute(
-      path: RoutePath.picList,
-      name: RouteName.picList,
+      path: RoutePath.picGallery,
+      name: RouteName.picGallery,
       builder: (context, state) {
-        return Container(color: Colors.green);
+        return PictureGalleryPage(
+          viewModel: PictureGalleryViewModel(client: ioc<PicturesClient>()),
+        );
       },
     ),
   ],
