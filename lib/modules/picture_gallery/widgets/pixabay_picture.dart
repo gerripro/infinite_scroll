@@ -12,6 +12,7 @@ class PixabayPicture extends StatelessWidget {
         Image.network(picture.previewURL),
         const SizedBox(height: 8),
         Text('views ${picture.views}'),
+        Text('likes ${picture.likes}'),
       ],
     );
   }
