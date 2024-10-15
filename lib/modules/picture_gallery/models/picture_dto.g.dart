@@ -7,6 +7,7 @@ part of 'picture_dto.dart';
 // **************************************************************************
 
 PictureDto _$PictureDtoFromJson(Map<String, dynamic> json) => PictureDto(
+      largeImageURL: json['largeImageURL'] as String,
       previewURL: json['previewURL'] as String,
       views: (json['views'] as num).toInt(),
       likes: (json['likes'] as num).toInt(),
@@ -15,6 +16,7 @@ PictureDto _$PictureDtoFromJson(Map<String, dynamic> json) => PictureDto(
 Map<String, dynamic> _$PictureDtoToJson(PictureDto instance) =>
     <String, dynamic>{
       'previewURL': instance.previewURL,
+      'largeImageURL': instance.largeImageURL,
       'views': instance.views,
       'likes': instance.likes,
     };

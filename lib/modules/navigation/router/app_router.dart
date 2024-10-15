@@ -8,7 +8,8 @@ final GoRouter _router = GoRouter(
       name: RouteName.picGallery,
       builder: (context, state) {
         return PictureGalleryPage(
-          viewModel: PictureGalleryViewModel(client: ioc<PicturesClient>()),
+          viewModel: PictureGalleryViewModel(
+              client: ioc<PicturesClient>(), router: _router),
         );
       },
     ),

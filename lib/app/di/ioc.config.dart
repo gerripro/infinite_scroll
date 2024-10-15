@@ -38,10 +38,10 @@ extension GetItInjectableX on _i174.GetIt {
         () => appRouterRegistrationModule.appRouter);
     gh.factory<_i361.Dio>(
         () => dioRegisterModule.getDio(gh<_i962.AppConfiguration>()));
-    gh.lazySingleton<_i564.NonAuthClient>(
-        () => _i564.NonAuthClient(http: gh<_i361.Dio>()));
     gh.lazySingleton<_i206.PicturesClient>(
         () => _i206.PicturesClient(http: gh<_i361.Dio>()));
+    gh.lazySingleton<_i564.NonAuthClient>(
+        () => _i564.NonAuthClient(http: gh<_i361.Dio>()));
     return this;
   }
 }
