@@ -31,12 +31,16 @@ class _PictureGalleryState extends State<PictureGallery> {
     var viewModel = widget.viewModel;
     return PagedGridView(
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: viewModel
-              .getColumnsNumber(MediaQuery.sizeOf(context).width)),
+          crossAxisCount:
+              viewModel.getColumnsNumber(MediaQuery.sizeOf(context).width)),
       pagingController: viewModel.pagingController,
       builderDelegate: PagedChildBuilderDelegate(
         itemBuilder: (context, item, index) {
-          return PixabayPicture(picture: item as PictureDto);
+          var picture = item as PictureDto;
+          return PixabayPicture(
+            picture: picture,
+            onTap: () => viewModel.handlePicTap(picture),
+          );
         },
       ),
     );
